@@ -1,0 +1,146 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import 'bootstrap';
+@import 'bootstrap-datetimepicker';
+html {
+	height:100%;
+	margin:0;
+	padding:0;
+}
+body {
+	height:100%;
+	margin:0;
+	padding:0;
+}
+#wrapper {
+	min-height: 100%;
+	position: relative;
+}
+nav.navbar.navbar-default.navbar-fixed-top {
+	background-color: rgba(224, 236, 255, 0);
+	a {
+		color:#fff;
+		font-weight: 500;
+		font-size: 17px;
+	}
+	a:hover {
+		color: #234;
+	}
+}
+footer#footer {
+	position: absolute;
+	bottom: -150px;
+	left: 0px;
+	width: 100%;
+	color: #fff;
+	p {
+		padding-top: 75px;
+		padding-bottom: 75px;
+		text-align: center;
+		background-color: #222;
+		width: 100%;
+		margin: 0;
+	}
+}
+.btn-lg, .btn-group-lg > .btn {
+    padding: 20px 40px;
+    font-size: 20px;
+    line-height: 1.3333333;
+    border-radius: 15px;
+    background-color: #0cf71f;
+
+}
+.logoimg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 731px;
+	text-align: center;
+	background-color: rgba(33, 33, 33, 0.6);
+	img {
+		width: 270px;
+		margin: 13em 0 4em;
+	}
+}
+
+.backgroundpic {
+	height: 731px;
+	width: 100%;
+	text-align: center;
+}
+.backgroundpic img {
+	position: absolute;
+	width: 100%;
+	margin: 0;
+	border: 0;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+h2#homelink.text-center{
+	margin: 0;
+	a.btn.btn-default.btn-lg {
+		
+		border-radius: 0;
+		border: 1px solid #fff;
+		background-color: inherit;
+		color: #fff;
+		
+	}
+}
+
+#notice-wrapper {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+	background: rgba(135, 216, 211, 0.65);
+	.alert, .notice {
+		padding: 2.8rem 0;
+		text-align: center;
+		margin: 0;
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #fff;
+		letter-spacing: 1px;
+		border-radius-bottom: 15px;
+	}
+	button,
+	button:active,
+	button:focus, 
+	button:hover,
+	.btn,
+	.btn:active, 
+	.btn:focus, 
+	.btn:hover{   
+	    outline:none !important;
+	    margin-top: 20px;
+	    margin-right: 5px;
+	    color: #fff;
+	    font-size: 900;
+	    font-weight: 900;
+	    z-index: -1;
+
+	}
+}
+
+
+
+
+
+

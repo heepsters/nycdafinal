@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Piepie</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  </head>
+  <body>
+  <div id="wrapper">
+    <% if notice %>
+      <div id="notice-wrapper">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% elsif alert %>
+      <div id="notice-wrapper">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+<!--           <li class="dropdown">
+            <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Barbers <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/">Redmond</a></li>
+              <li><a href="/">Lua</a></li>
+              <li><a href="/">Vili</a></li>
+              <li><a href="/">Jaymes</a></li>
+              <li><a href="/">Una</a></li>
+              <li class="divider"></li>
+              <li><a href="/">Barber Profiles</a></li>
+              <li class="divider"></li>
+              <li><%= link_to "Openings", appointments_path %></li>
+            </ul>
+          </li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? or admin_signed_in? %>
+          <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
+          <% else %>
+          <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+          <% end -%>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+  <!-- footer start -->
+
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer id="footer">
+      <p>&copy 2017 Redmond's Barbershop 159 East 800 South, Salt Lake City, UT 84111</p>
+    </footer>
+  </div>
+
+<script>
+$(document).ready(function(){
+  setTimeout(function(){
+  $('#notice_wrapper').fadeOut("slow", function() {
+    $(this).remove();
+   })
+  }, 4500);
+});
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

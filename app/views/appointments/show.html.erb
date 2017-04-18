@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Admin:</strong>
+  <%= @appointment.admin_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @appointment.user_id %>
+</p>
+
+<p>
+  <strong>Select day:</strong>
+  <%= @appointment.select_day.strftime('%A %B %d, %Y') %>
+</p>
+
+<p>
+  <strong>Select time:</strong>
+  <%= @appointment.select_time.strftime('%H:%M %P') %>
+</p>
+
+<p>
+  <strong>Appointment type:</strong>
+  <%= @appointment.appointment_type %>
+</p>
+
+<p>
+  <strong>Appointment Cost:</strong>
+  <%= @appointment.cost %>
+</p>
+
+<p>
+  <strong>Tip Game:</strong>
+  <%= @appointment.tip %>
+</p>
+
+<%= link_to 'Edit', edit_appointment_path(@appointment) %> |
+<%= link_to 'Back', appointments_path %>

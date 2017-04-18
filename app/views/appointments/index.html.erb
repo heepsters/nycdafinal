@@ -1,0 +1,47 @@
+<%= link_to "Back", root_path %>
+<h1>Openings</h1>
+<div class="form-group">
+  <%= search_form_for @search, url: search_appointments_path, html: { class: 'form-inline', method: :post } do |f| %>
+    <div class="field input-daterange col-md-4">
+      <%= f.text_field :select_day_gteq, placeholder: "Start Date", data_provide:'datepicker', class: "form-control input" %>
+      <%= f.text_field :select_day_lteq, placeholder: "End Date", class: "form-control input" %>
+      <div class="actions col-md-1">
+        <%= f.submit "Search Openings", class: "btn btn-default", type: "submit" %>  
+      <% end -%>
+      </div>
+    </div>
+  </div>
+<table>
+  <thead>
+    <tr>
+      <th><%= sort_link(@search, :admin_id) %></th>
+      <th><%= sort_link(@search, :user_id) %></th>
+      <th><%= sort_link(@search, :select_day) %></th>
+      <th>Select Time</th>
+      <th>Appointment Type</th>
+      <th>Appointment Cost</th>
+      <th>Client Tip</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.admin_id %></td>
+        <td><%= appointment.user_id %></td>
+        <td><%= link_to appointment.select_day.strftime('%A %B %d, %Y'), appointment %></td>
+        <td><%= appointment.select_time.strftime('%H:%M %P') %></td>
+        <td><%= appointment.appointment_type %></td>
+        <td><%= appointment.cost %></td>
+        <td><%= appointment.tip %></td>       
+        <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
+        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Appointment', new_appointment_path %>
