@@ -34,7 +34,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 	a {
 		color:#fff;
 		font-weight: 500;
-		font-size: 17px;
+		font-size: 15px;
 	}
 	a:hover {
 		color: #234;
@@ -58,10 +58,6 @@ footer#footer {
 .btn-lg, .btn-group-lg > .btn {
     padding: 20px 40px;
     font-size: 20px;
-    line-height: 1.3333333;
-    border-radius: 15px;
-    background-color: #0cf71f;
-
 }
 .logoimg {
 	position: absolute;
@@ -70,10 +66,10 @@ footer#footer {
 	width: 100%;
 	height: 731px;
 	text-align: center;
-	background-color: rgba(33, 33, 33, 0.6);
+	background-color: rgba(221, 221, 221, 0.5);
 	img {
-		width: 270px;
-		margin: 13em 0 4em;
+		width: 370px;
+		margin: 13em 0 2em;
 	}
 }
 
@@ -92,18 +88,20 @@ footer#footer {
 	z-index: -1;
 }
 
-h2#homelink.text-center{
+h4#homelink.text-center{
 	margin: 0;
 	a.btn.btn-default.btn-lg {
-		
 		border-radius: 0;
 		border: 1px solid #fff;
 		background-color: inherit;
 		color: #fff;
-		
+		font-size: 25px;
+		padding: 10px 22px;
 	}
 }
-
+a.btn.btn-default.btn-lg:hover {
+	background-color: rgba(226, 20, 20, 0.65) !important;
+}
 #notice-wrapper {
 	position: absolute;
 	top: 0;
