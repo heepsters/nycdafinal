@@ -42,7 +42,7 @@ nav.navbar.navbar-default.navbar-fixed-top {
 }
 footer#footer {
 	position: absolute;
-	bottom: -150px;
+	bottom: -130px;
 	left: 0px;
 	width: 100%;
 	color: #fff;
@@ -66,13 +66,12 @@ footer#footer {
 	width: 100%;
 	height: 731px;
 	text-align: center;
-	background-color: rgba(221, 221, 221, 0.5);
+	background-color: rgba(0, 0, 0, 0.9);
 	img {
 		width: 370px;
 		margin: 13em 0 2em;
 	}
 }
-
 .backgroundpic {
 	height: 731px;
 	width: 100%;
@@ -136,9 +135,23 @@ a.btn.btn-default.btn-lg:hover {
 
 	}
 }
-
-
-
-
+input#user_email,input#user_password,input#user_password_confirmation {
+	width: 300px;
+	height: 40px;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+.sign_wrapper {
+	color: #fff;
+	font-size: 15px;
+	width: 400px;
+	padding: 1em 1em;
+	margin: 10em 33%;
+	background-color: rgba(206, 122, 122, 0.75);
+	border-radius: 5px;
+}
+.sign_wrapper h2 {
+	color: #fff;
+}
 
 
