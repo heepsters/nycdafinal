@@ -21,6 +21,7 @@ html {
 	padding:0;
 }
 body {
+	background-color: #fff;
 	height:100%;
 	margin:0;
 	padding:0;
@@ -40,9 +41,22 @@ nav.navbar.navbar-default.navbar-fixed-top {
 		color: #234;
 	}
 }
+.page_logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	text-align: center;
+	img {
+		width: 100px;
+		margin-top: 20px;
+	}
+}
 footer#footer {
 	position: absolute;
-	bottom: -130px;
+	bottom: -170px;
 	left: 0px;
 	width: 100%;
 	color: #fff;
@@ -66,14 +80,14 @@ footer#footer {
 	width: 100%;
 	height: 731px;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-color: rgba(0, 0, 0, 0.8);
 	img {
 		width: 370px;
 		margin: 13em 0 2em;
 	}
 }
 .backgroundpic {
-	height: 731px;
+	height: 641px;
 	width: 100%;
 	text-align: center;
 }
@@ -85,6 +99,7 @@ footer#footer {
 	top: 0;
 	left: 0;
 	z-index: -1;
+	height: 801px;
 }
 
 h4#homelink.text-center{
@@ -140,6 +155,7 @@ input#user_email,input#user_password,input#user_password_confirmation {
 	height: 40px;
 	border-radius: 5px;
 	padding: 0 10px;
+	color: #333;
 }
 .sign_wrapper {
 	color: #fff;
@@ -153,5 +169,18 @@ input#user_email,input#user_password,input#user_password_confirmation {
 .sign_wrapper h2 {
 	color: #fff;
 }
-
-
+#sign_btn.actions input {
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	outline: none;
+	background-color: rgba(129, 244, 41, 0.8);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #333;
+}
+.select_menu {
+	background-color: #fff;
+	margin-top: 10em;
+	padding: 20px 0;
+}
